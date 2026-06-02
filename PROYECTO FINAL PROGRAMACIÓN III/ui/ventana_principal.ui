@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VentanaPrincipal</class>
+ <widget class="QMainWindow" name="VentanaPrincipal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>783</width>
+    <height>671</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Calculadora Cientifica Avanzada</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QMdiArea" name="mdi_area">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>711</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="background">
+     <brush brushstyle="SolidPattern">
+      <color alpha="255">
+       <red>17</red>
+       <green>8</green>
+       <blue>16</blue>
+      </color>
+     </brush>
+    </property>
+    <property name="viewMode">
+     <enum>QMdiArea::ViewMode::SubWindowView</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menu_bar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>783</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_Calculadora">
+    <property name="title">
+     <string>&amp;Calculadora</string>
+    </property>
+    <addaction name="ac_basico"/>
+    <addaction name="ac_cientifico"/>
+    <addaction name="ac_conversor"/>
+    <addaction name="ac_graficador"/>
+    <addaction name="separator"/>
+    <addaction name="ac_salir"/>
+   </widget>
+   <widget class="QMenu" name="menu_Vista">
+    <property name="title">
+     <string>&amp;Vista</string>
+    </property>
+    <widget class="QMenu" name="menu_Ventanas_MDI">
+     <property name="title">
+      <string>&amp;Ventanas MDI</string>
+     </property>
+     <addaction name="ac_cascade"/>
+     <addaction name="ac_tile"/>
+     <addaction name="ac_cerrar_todas"/>
+    </widget>
+    <addaction name="ac_oscuro"/>
+    <addaction name="ac_claro"/>
+    <addaction name="ac_alto_contraste"/>
+    <addaction name="menu_Ventanas_MDI"/>
+   </widget>
+   <widget class="QMenu" name="menu_Historial">
+    <property name="title">
+     <string>&amp;Historial</string>
+    </property>
+    <addaction name="ac_borrar_historial"/>
+   </widget>
+   <widget class="QMenu" name="menu_Ayuda">
+    <property name="title">
+     <string>A&amp;yuda</string>
+    </property>
+    <addaction name="ac_acerca"/>
+   </widget>
+   <addaction name="menu_Calculadora"/>
+   <addaction name="menu_Vista"/>
+   <addaction name="menu_Historial"/>
+   <addaction name="menu_Ayuda"/>
+  </widget>
+  <widget class="QToolBar" name="toolbar">
+   <property name="windowTitle">
+    <string>Principal</string>
+   </property>
+   <property name="movable">
+    <bool>true</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="tb_basico"/>
+   <addaction name="tb_cientifico"/>
+   <addaction name="tb_conversor"/>
+   <addaction name="tb_graficador"/>
+   <addaction name="tb_oscuro"/>
+   <addaction name="tb_claro"/>
+   <addaction name="tb_contraste"/>
+   <addaction name="tb_mosaico"/>
+   <addaction name="tb_cascada"/>
+  </widget>
+  <widget class="QStatusBar" name="status_bar"/>
+  <action name="ac_basico">
+   <property name="text">
+    <string>Modo Basico</string>
+   </property>
+   <property name="statusTip">
+    <string>Calculadora basica aritmetica</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+1</string>
+   </property>
+  </action>
+  <action name="ac_cientifico">
+   <property name="text">
+    <string>Modo Cientifico</string>
+   </property>
+   <property name="statusTip">
+    <string>Calculadora con funciones cientificas</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+2</string>
+   </property>
+  </action>
+  <action name="ac_conversor">
+   <property name="text">
+    <string>Modo Conversor</string>
+   </property>
+   <property name="statusTip">
+    <string>Convertidor de unidades</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+3</string>
+   </property>
+  </action>
+  <action name="ac_graficador">
+   <property name="text">
+    <string>Modo Graficador</string>
+   </property>
+   <property name="statusTip">
+    <string>Graficador de funciones matematicas</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+4</string>
+   </property>
+  </action>
+  <action name="ac_salir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="ac_oscuro">
+   <property name="text">
+    <string>Tema Oscuro</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+D</string>
+   </property>
+  </action>
+  <action name="ac_claro">
+   <property name="text">
+    <string>Tema Claro</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+L</string>
+   </property>
+  </action>
+  <action name="ac_alto_contraste">
+   <property name="text">
+    <string>Alto Contraste</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+A</string>
+   </property>
+  </action>
+  <action name="ac_cascade">
+   <property name="text">
+    <string>Cascada</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+C</string>
+   </property>
+  </action>
+  <action name="ac_tile">
+   <property name="text">
+    <string>Mosaico</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+T</string>
+   </property>
+  </action>
+  <action name="ac_cerrar_todas">
+   <property name="text">
+    <string>Cerrar todas</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+W</string>
+   </property>
+  </action>
+  <action name="ac_borrar_historial">
+   <property name="text">
+    <string>Borrar historial</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="ac_acerca">
+   <property name="text">
+    <string>Acerca de...</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="tb_basico">
+   <property name="text">
+    <string>Basico</string>
+   </property>
+  </action>
+  <action name="tb_cientifico">
+   <property name="text">
+    <string>Cientifico</string>
+   </property>
+  </action>
+  <action name="tb_conversor">
+   <property name="text">
+    <string>Conversor</string>
+   </property>
+  </action>
+  <action name="tb_graficador">
+   <property name="text">
+    <string>Graficador</string>
+   </property>
+  </action>
+  <action name="tb_oscuro">
+   <property name="text">
+    <string>Oscuro</string>
+   </property>
+  </action>
+  <action name="tb_claro">
+   <property name="text">
+    <string>Claro</string>
+   </property>
+  </action>
+  <action name="tb_contraste">
+   <property name="text">
+    <string>Contraste</string>
+   </property>
+  </action>
+  <action name="tb_mosaico">
+   <property name="text">
+    <string>Mosaico</string>
+   </property>
+  </action>
+  <action name="tb_cascada">
+   <property name="text">
+    <string>Cascada</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
